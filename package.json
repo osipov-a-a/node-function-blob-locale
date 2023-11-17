@@ -1,0 +1,25 @@
+{
+  "name": "function-blob-locale-2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/osipov-a-a/node-function-blob-locale.git"
+  },
+  "keywords": [
+    "azure",
+    "function",
+    "blob",
+    "nodejs"
+  ],
+  "author": "artem_osipov1@epam.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/osipov-a-a/node-function-blob-locale/issues"
+  },
+  "homepage": "https://github.com/osipov-a-a/node-function-blob-locale#readme"
+}
