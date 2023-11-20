@@ -1,25 +1,16 @@
 {
-  "name": "function-blob-locale-2",
+  "name": "node-function-blob-locale-2",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "func start",
+    "test": "echo \"No tests yet...\""
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/osipov-a-a/node-function-blob-locale.git"
+  "dependencies": {
+    "@azure/functions": "^4.0.0",
+    "@azure/identity": "^4.0.0",
+    "@azure/storage-blob": "^12.17.0",
+    "dotenv": "^16.3.1"
   },
-  "keywords": [
-    "azure",
-    "function",
-    "blob",
-    "nodejs"
-  ],
-  "author": "artem_osipov1@epam.com",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/osipov-a-a/node-function-blob-locale/issues"
-  },
-  "homepage": "https://github.com/osipov-a-a/node-function-blob-locale#readme"
+  "main": "src/functions/*.js"
 }
