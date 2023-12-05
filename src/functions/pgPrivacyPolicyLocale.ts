@@ -9,12 +9,11 @@ dotenv.config()
 export async function pgPrivacyPolicyLocale(request: HttpRequest, context: InvocationContext): Promise<HttpResponseInit> {
     context.log(`Http function processed request for url "${request.url}"`)
 
-    const locale: string | null = request.query.get('locale')
-    if(!locale) throw Error('locale parameter missing')
-    const region: string | null= request.query.get('region')
-    if(!region) throw Error('region parameter is missing')
-
     try {
+      const locale: string | null = request.query.get('locale')
+      if(!locale) throw Error('locale parameter missing')
+      const region: string | null= request.query.get('region')
+      if(!region) throw Error('region parameter is missing')
       const accountName: string | undefined = process.env.AZURE_STORAGE_ACCOUNT_NAME
       if (!accountName) throw Error('Azure Storage accountName not found')
       const containerName: string | undefined = process.env.AZURE_STORAGE_CONTAINER_NAME
@@ -49,13 +48,13 @@ export async function pgPrivacyPolicyLocale(request: HttpRequest, context: Invoc
 };
 
 app.http('pgPrivacyPolicyLocale', {
-    methods: ['GET', 'POST'],
+    methods: ['GET'],
     authLevel: 'anonymous',
     handler: pgPrivacyPolicyLocale
 });
 
 async function streamToText (readable: NodeJS.ReadableStream | undefined) {
-  let data:string = ''
+  let data:string = '{}'
   if (readable){
     readable.setEncoding('utf8')
     
